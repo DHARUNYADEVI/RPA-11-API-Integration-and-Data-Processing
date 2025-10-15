@@ -13,15 +13,20 @@ To display a Welcome Message based on the user's role or name using If and Switc
 3.Create the API endpoint URL: Example: "https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY&units=metric"
 
 4.Use the HTTP Request activity:
-*Method: GET
-*URL: The full endpoint above
-*Set Output to a variable (e.g., responseWeather)
+
+* Method: GET
+  
+* URL: The full endpoint above
+
+* Set Output to a variable (e.g., responseWeather)
 
 5.Use Deserialize JSON to parse responseWeather.
 
 6.Extract values like:
-*Temperature: jsonObject("main")("temp").ToString
-*Description: jsonObject("weather")(0)("description").ToString
+
+* Temperature: jsonObject("main")("temp").ToString
+  
+* Description: jsonObject("weather")(0)("description").ToString
 
 7.Display the result in a Message Box.
 
